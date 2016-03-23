@@ -152,6 +152,15 @@ Setting up a production instance with Apache and Postrgres on SLES 12 SP1
     ```
     systemctl start apache2
     ```
+    
+1.  Install Cron for email and expiration.
+    ```
+    Crontab -e
+    ```
+    Add the following
+    ```
+    0 */6 * * * /usr/sbin/openbare-user-monitor
+    ```
 
 Useful Links
 ------------
